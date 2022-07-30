@@ -1,0 +1,34 @@
+import React from 'react';
+import { Toaster } from 'react-hot-toast';
+
+import { Layout } from '../components';
+import '../styles/globals.css';
+import { StateContext } from '../context/StateContext';
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <StateContext>
+      <Layout>
+        <Toaster />
+        <Component {...pageProps} />
+      </Layout>
+    </StateContext>
+  )
+}
+
+export default MyApp
+
+// const App = () => {
+//   const [counter, setCounter] = useState(0);
+
+//   const increment = () => {
+//     setCounter(counter + 3);
+//   };
+//   return (
+//     <div>
+//       This was made from Scratch by Gursangat! Also hello world!
+//       <button onClick={increment}>Increment</button>
+//       {counter}
+//     </div>
+//   );
+// };
